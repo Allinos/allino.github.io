@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allinos Website</title>
+    <link rel="shortcut icon" type="image/jpg" href="/static/img/path112.png" />
+    <!-- <link rel="stylesheet" href="/static/css/mobiletab.css"> -->
+    <link rel="stylesheet" href="/static/css/bg-struc-body.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+</head>
+
+<style>
+    #price-col {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        background-color: rgb(202, 237, 238);
+        padding-bottom: 150px;
+    }
+    
+    .columns {
+        margin-top: 30px;
+        width: 30%;
+        padding: 8px;
+        background-color: #fff;
+    }
+    
+    .price {
+        list-style-type: none;
+        border: 1px solid #eee;
+        margin: 0;
+        padding: 0;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+    }
+    
+    .price:hover {
+        box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2)
+    }
+    
+    .price .header {
+        background-color: #111;
+        color: white;
+        font-size: 25px;
+    }
+    
+    .price li {
+        border-bottom: 1px solid #eee;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .price .grey {
+        background-color: rgb(178, 229, 245);
+        font-size: 20px;
+    }
+    
+    .button1 {
+        background-color: #0497aa;
+        border: none;
+        color: white;
+        padding: 10px 25px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 18px;
+    }
+    
+    @media only screen and (max-width: 600px) {
+        .columns {
+            width: 90%;
+        }
+    }
+    
+    .accordion {
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+        color: black;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+    }
+    
+    .active,
+    .accordion:hover {
+        background-color: #ccc;
+    }
+    
+    .panel {
+        padding: 0 18px;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
+</style>
+
+<body>
+    <!-- nav -->
+    <header>
+        <style>
+            * {
+                scroll-behavior: smooth;
+            }
+            
+            @media screen and (max-width:500px) {
+                .manus {
+                    display: none;
+                }
+                #mobile-manu {
+                    display: block;
+                }
+                .navbaricon {
+                    width: 50px;
+                    position: absolute;
+                    top: 5px;
+                    right: 33px;
+                }
+                .sidenav {
+                    height: 100%;
+                    width: 0;
+                    position: fixed;
+                    z-index: 1;
+                    top: 0;
+                    left: 0;
+                    background-color: #111;
+                    overflow-x: hidden;
+                    transition: 0.5s;
+                    padding-top: 60px;
+                }
+                .sidenav a {
+                    padding: 8px 8px 8px 32px;
+                    text-decoration: none;
+                    font-size: 25px;
+                    color: #fffefe;
+                    display: block;
+                    transition: 0.3s;
+                }
+                .sidenav a:hover {
+                    color: #f1f1f1;
+                }
+                .sidenav .closebtn {
+                    position: absolute;
+                    top: 0;
+                    right: 25px;
+                    font-size: 36px;
+                    margin-left: 50px;
+                }
+            }
+        </style>
+
+        <div class="navbar ">
+            <div>
+                <a href="/">
+                    <img src="/static/img/path51.png ">
+                    <p class="tagline ">Get Every Thing Online</p>
+                </a>
+            </div>
+            <!-- manu -->
+            <ul class="manus">
+                <a href="/ ">
+                    <li class="manu ">Home</li>
+                </a>
+                <a href="/#tools ">
+                    <li class="manu ">Tools</li>
+                </a>
+                <a href="/#Services ">
+                    <li class="manu ">Services</li>
+                </a>
+                <a href="/about ">
+                    <li class="manu ">About</li>
+                </a>
+                <a href="/contact ">
+                    <li class="manu ">Contect Us</li>
+                </a>
+
+            </ul>
+        </div>
+        <!-- responsive sidebar-->
+        <div id="mobile-manu">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" style="padding: 0px 12px;margin-top: 18px; border-radius: 40px;border: 2px solid white;" class="closebtn" onclick="closeNav()">&times;</a>
+                <br><br><br>
+                <a href="/">Home</a>
+                <a href="/about">About us</a>
+                <a href="/#Services">Services</a>
+                <a href="/#tools">Tools</a>
+                <!-- <a href="https://tools.allino.online">All tools</a> -->
+                <a href="/contact">Contact</a>
+                <a href="/Terms_Conditions">Terms & Conditions</a>
+                <a href="/Privacy_Policy">Privacy Policy</a>
+                <a href="/Disclaimer">Disclaimer</a>
+                <a href="/static/about/projects">Projects</a>
+                <!-- <a href="/blogs">Blogs</a> -->
+            </div>
+            <!-- icon -->
+            <img class="navbaricon" onclick="openNav()" src="/static/img/navicon.png">
+
+
+        </div>
+
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+    </header>
+    <!-- bg body -->
+    <div id="bodycircle1"></div>
+    <div id="bodycircle"></div>
+
+
+    <br><br><br><br><br>
+    <h2 style="text-align:center;color: white;">Website Development Pricing Tables</h2>
+    <!-- <p style="text-align:center">Resize the browser window to see the effect.</p> -->
+    <div id="price-col">
+
+        <div class="columns">
+            <ul class="price">
+                <li class="header" style="background: linear-gradient( rgb(248, 211, 3),white 150%)">Basic</li>
+                <li class="grey">₹ <del>3000</del> <strong>Free</strong></li>
+                <li>Free 1GB SSD Storage</li>
+                <li>Free Static Website</li>
+                <li>Free Co-Domain</li>
+                <li>1GB Bandwidth</li>
+                <li>N/A</li>
+                <li>N/A</li>
+                <li>N/A</li>
+                <li class="accordion">Terms & Condition&nbsp;&#8628;</li>
+                <div class="panel">
+                    <p>We provide that website only for 1 month </p>
+                    <p>After that you have to buy on monthly basis for 1 Year .</p>
+                </div>
+                <li class="grey"><a href="#" class="button1">Buy Now*</a></li>
+            </ul>
+        </div>
+
+        <div class="columns">
+            <ul class="price">
+                <li class="header" style=" background: linear-gradient( #03a4e4,white 150%)">Starter</li>
+                <li class="grey">₹ <del>1100/m</del> 500/m or FRP</li>
+                <li>10GB SSD Storage</li>
+                <li>5+ Pages</li>
+                <li>Static /Dynamic Website</li>
+                <li>Wordpress ,OpenCart ,Maganto & more</li>
+                <li>1 Domains/Co-domain</li>
+                <li>Free Maintainence</li>
+                <li>3GB Bandwidth</li>
+                <li>N/A</li>
+                <li class="grey"><a href="#" class="button1">Buy Now*</a></li>
+            </ul>
+        </div>
+
+        <div class="columns">
+            <ul class="price">
+                <li class="header" style=" background: linear-gradient( #089c21 10%,white 150%)">Premium</li>
+                <li class="grey">As per Requirment</li>
+                <li>25GB SSD Storage</li>
+                <li>1 business Email</li>
+                <li>10+ Pages</li>
+                <li>Static /Dynamic Website</li>
+                <li>Wordpress ,OpenCart ,Maganto & more</li>
+                <li> Domains/Co-domain</li>
+                <li>Free Search Engine Submission</li>
+                <li class="accordion">More +&nbsp;&#8628;</li>
+                <div class="panel">
+                    <p>
+
+                        <li>Free Maintainence</li>
+                        <li>Free Domains</li>
+                        <li>7GB Bandwidth</li>
+                    </p>
+                </div>
+                <li class="grey"><a href="#" class="button1">Buy Now*</a></li>
+            </ul>
+        </div>
+
+        <div class="columns" style="margin:15px auto ;">
+            <ul class="price">
+                <li class="header" style=" background: linear-gradient(rgb(206, 37, 7) ,white 150%)">Premium++</li>
+                <li class="grey">As per Requirment</li>
+                <li>50GB SSD Storage</li>
+                <li class="accordion">Static /Dynamic Website&nbsp;&#8628;</li>
+                <div class="panel">
+                    <p> Magento / OpenCart / WooCommerce / Shopify / PrestaShop and more CMS setup for Online store and other uses !<br> eCommerce / Business / Entertainment / Nonprofit / Personal / Web Portal / Portfolio / Blogs / Educational / Informational
+                        / Social Media / Brochures / Events / Online Forums / Membership
+
+                    </p>
+                </div>
+                <li>Unlimited Page</li>
+                <li>Social Media Integration</li>
+                <!-- <li>CSS Animation </li> -->
+                <li> Emails </li>
+                <li>Free Maintainence</li>
+                <li>Free SSL</li>
+                <li>Free Search Engine Submission</li>
+                <li>Free TLD Domains/Co-Domain</li>
+                <li>Unlimited Bandwidth</li>
+                <li class="grey"><a href="#" class="button1">Buy Now*</a></li>
+            </ul>
+        </div>
+
+        <br><br><br><br><br><br>
+    </div>
+
+    <p></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
+
+    <!-- footer -->
+    <footer style="clear: both;">
+        <div><img class="footerimg" src="/static/img/path111.png" alt="">
+            <h3 id="cname">AllinO</h3>
+        </div>
+        <div style="width: 20%; border: 3px solid white;"></div>
+
+        <div class="footer-link">
+            <a href="/">
+
+                <p>Home</p>
+            </a>
+            <a href="/about">
+
+                <p>About us</p>
+            </a>
+            <!-- <a href="#tools">
+                <p>Tools</p>
+            </a> -->
+            <!-- <a href="https://tools.allino.onine">
+                <p>All Tools</p>
+            </a> -->
+            <a href="/#Services">
+                <p>Services</p>
+            </a>
+            <!-- <a href="http://infornx.blogspot.com">
+                <p>Blogs</p>
+            </a> -->
+            <a href="/contact">
+                <p>Contact</p>
+            </a>
+            <a href="/Terms_Conditions">
+                <p>Terms & Conditions</p>
+            </a>
+            <a href="/Privacy_Policy">
+                <p>Privacy Policy</p>
+            </a>
+            <a href="/Disclaimer">
+                <p>Disclaimer</p>
+            </a>
+            <!-- <a href="/jobs">
+                <p>Find Works</p>
+            </a> -->
+            <!-- <a href="http://server1.allino.online">
+                <p>Projects/Demo</p>
+            </a> -->
+            <a href="/services/affiliate">
+                <p>Affiliate</p>
+            </a>
+        </div>
+        <div class="last-info">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+            <div class="social-buttons">
+                <div class="last-info-div">
+                    <h3 style="width: 100px; text-align: center;font-size: 22px; color: white; ">Support</h3>
+                    <a href="mailto:info@allino.online"><i class="fas fa-envelope-open"></i></a>
+                    <a href="/contact"><i class="fas fa-phone"></i></a><br>
+                    <a href=""><i class="	fas fa-map-marker-alt"></i></a>
+                    <h5 style="display: inline-block;font-size: 16px;color: white;">Flat no. 177, Chennd Colony , India
+                    </h5>
+                </div>
+            </div>
+            <div class="social-buttons">
+                <div class="last-info-div">
+                    <h3 style="width: 130px; text-align: center;font-size: 22px; color: white;">Social Links</h3>
+                    <a href="/contact"><i class="fab fa-teamspeak"></i></a>
+                    <a href="/contact"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/allinos_7"><i class="fab fa-instagram"></i></a>
+                    <a href="/contact"><i class="fab fa-youtube"></i></a>
+                    <a href="/contact"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <h5 class="coppyright">Copyright © 2020-2021, All Rights Reserved by Allinos Org.
+            </h5>
+        </div>
+
+
+        <!-- <script></script>========= -->
+        <script src="/static/javascript/allino.js"></script>
+        <!-- scripts -->
+</body>
+
+</html>

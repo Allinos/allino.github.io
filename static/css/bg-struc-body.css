@@ -1,0 +1,124 @@
+body {
+    margin: 0px;
+}
+
+#bodycircle {
+    background: rgb(133, 38, 181);
+    background: linear-gradient(53deg, rgba(133, 38, 181, 1) 0%, rgba(81, 196, 166, 1) 30%, rgba(34, 192, 197, 1) 70%, rgba(45, 171, 253, 1) 100%);
+    clip-path: circle(50% at 100% 17%);
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 660px;
+}
+
+#bodycircle1 {
+    background-color: rgb(16, 157, 238);
+    clip-path: polygon(50% 0%, 100% 0, 60% 51%, 24% 75%, 0 91%, 0% 60%, 0 0);
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 720px;
+}
+
+
+/* .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    transition: .111s;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+} */
+
+.movingtext {
+    margin: 50px;
+    padding: 40px;
+    font-size: 65px;
+    color: white;
+}
+
+
+/* media query mobile and tabs */
+
+@media screen and (max-width:1035px) {
+    .movingtext {
+        margin: 16px;
+        padding: 4px;
+        font-size: 38px;
+    }
+    #bodycircle {
+        position: absolute;
+        top: 10px;
+        height: 850px;
+    }
+    #bodycircle1 {
+        position: absolute;
+        top: 10px;
+        height: 850px;
+    }
+}
+
+.pagetextbox {
+    border-radius: 15px;
+    margin: auto;
+    width: 70%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #fff;
+    border: 2px solid rgb(165, 160, 160);
+    padding: 40px;
+    font-size: 19px;
+}
+
+@media screen and (max-width:800px) {
+    .pagetextbox {
+        border-radius: 15px;
+        margin: auto;
+        width: 78%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        background-color: #fff;
+        border: 2px solid rgb(255, 255, 255);
+    }
+    .pagetextbox p {
+        padding: 10px;
+        font-size: 16px;
+        margin: 0px;
+    }
+}
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+ ::-webkit-scrollbar-track {
+    background: #07aef6;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255);
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: rgb(158, 219, 235);
+}

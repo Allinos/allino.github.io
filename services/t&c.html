@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AllinO</title>
+    <link rel="shortcut icon" type="image/jpg" href="/static/img/path112.png" />
+    <!-- <link rel="stylesheet" href="/static/css/mobiletab.css"> -->
+    <link rel="stylesheet" href="/static/css/bg-struc-body.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+</head>
+<style>
+    * {
+        scroll-behavior: smooth;
+    }
+    
+    #main-div {
+        width: 70%;
+        border-radius: 13px;
+        padding: 30px;
+        margin: auto;
+        background-color: #fff;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+    #main-div p {
+        background-color: rgb(24, 188, 230);
+        color: #fff;
+        padding: 10px;
+        font-weight: bold;
+    }
+    
+    .accordion {
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+        color: black;
+        border: none;
+        text-align: left;
+        outline: none;
+        transition: 0.4s;
+    }
+    
+    .active,
+    .accordion:hover {
+        background-color: #ccc;
+        padding: 5px;
+    }
+    
+    .panel {
+        padding: 0 18px;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
+    
+    .panel p {
+        background-color: rgb(68, 159, 233);
+    }
+    
+    .webopn p {
+        background-color: rgb(184, 219, 233);
+    }
+    
+    iframe {
+        width: 60%;
+        display: block;
+        margin: auto;
+        height: 315px;
+        border: none;
+        background: rgba(219, 217, 217, 0.315);
+    }
+    
+    @media screen and (max-width:600px) {
+        #main-div {
+            width: 87%;
+            margin: auto;
+            padding: 20px;
+        }
+        iframe {
+            width: 95%;
+            display: block;
+            margin: auto;
+            height: 160px;
+            border: none;
+            background: rgba(219, 217, 217, 0.315);
+        }
+    }
+    
+    .thankvid {
+        width: 100%;
+        text-align: center;
+        color: rgb(165, 238, 165);
+    }
+</style>
+
+<body>
+    <!-- nav -->
+    <header>
+        <style>
+            * {
+                scroll-behavior: smooth;
+            }
+            
+            @media screen and (max-width:500px) {
+                .manus {
+                    display: none;
+                }
+                #mobile-manu {
+                    display: block;
+                }
+                .navbaricon {
+                    width: 50px;
+                    position: absolute;
+                    top: 5px;
+                    right: 33px;
+                }
+                .sidenav {
+                    height: 100%;
+                    width: 0;
+                    position: fixed;
+                    z-index: 1;
+                    top: 0;
+                    left: 0;
+                    background-color: #111;
+                    overflow-x: hidden;
+                    transition: 0.5s;
+                    padding-top: 60px;
+                }
+                .sidenav a {
+                    padding: 8px 8px 8px 32px;
+                    text-decoration: none;
+                    font-size: 25px;
+                    color: #fffefe;
+                    display: block;
+                    transition: 0.3s;
+                }
+                .sidenav a:hover {
+                    color: #f1f1f1;
+                }
+                .sidenav .closebtn {
+                    position: absolute;
+                    top: 0;
+                    right: 25px;
+                    font-size: 36px;
+                    margin-left: 50px;
+                }
+            }
+        </style>
+
+        <div class="navbar ">
+            <div>
+                <a href="/">
+                    <img src="/static/img/path51.png ">
+                    <p class="tagline ">Get Every Thing Online</p>
+                </a>
+            </div>
+            <!-- manu -->
+            <ul class="manus">
+                <a href="/ ">
+                    <li class="manu ">Home</li>
+                </a>
+                <a href="/#tools ">
+                    <li class="manu ">Tools</li>
+                </a>
+                <a href="/#Services ">
+                    <li class="manu ">Services</li>
+                </a>
+                <a href="/about ">
+                    <li class="manu ">About</li>
+                </a>
+                <a href="/contact ">
+                    <li class="manu ">Contect Us</li>
+                </a>
+
+            </ul>
+        </div>
+        <!-- responsive sidebar-->
+        <div id="mobile-manu">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" style="padding: 0px 12px;margin-top: 18px; border-radius: 40px;border: 2px solid white;" class="closebtn" onclick="closeNav()">&times;</a>
+                <br><br><br>
+                <a href="/">Home</a>
+                <a href="/about">About us</a>
+                <a href="/#Services">Services</a>
+                <a href="/#tools">Tools</a>
+                <!-- <a href="https://tools.allino.online">All tools</a> -->
+                <a href="/contact">Contact</a>
+                <a href="/Terms_Conditions">Terms & Conditions</a>
+                <a href="/Privacy_Policy">Privacy Policy</a>
+                <a href="/Disclaimer">Disclaimer</a>
+                <a href="/static/about/projects">Projects</a>
+                <!-- <a href="/blogs">Blogs</a> -->
+            </div>
+            <!-- icon -->
+            <img class="navbaricon" onclick="openNav()" src="/static/img/navicon.png">
+
+
+        </div>
+
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+    </header>
+    <!-- bg body -->
+    <div id="bodycircle1"></div>
+    <div id="bodycircle"></div>
+    <br><br><br>
+    <div id="main-div">
+        <h1 style="text-align: center;">Allinos Affiliate Partnership Program</h1> <br>
+        <h3 style="text-align: center;color: rgb(248, 152, 27);">Be Our Partner and Make your career with Us</h3>
+
+        <%- joined %>
+
+
+            <br><br> Thank you for joining the Allinos affiliate program. Our partners are very important to us. This Agreement is designed with the safety of you, Allinos and our customers in mind as well as yours. Please read carefully. If you have
+            any questions, please contact us .
+
+            <div id="afftype"></div>
+
+            <p> Associated Agreement</p>
+
+            This Agreement describes the terms and conditions for Joining in the Allinos Affiliate Program. In this Agreement, the term "Affiliate" refers to you. In this Agreement, "Allinos Org." is a Website and Digital Services Provider startup with whom you are
+            making this Agreement. By applying to the Allinos Affiliate Program, you are confirming that you have read the Agreement and agree to the Terms and Conditions.
+
+            <p>Affiliate program Types </p>
+
+            There are two types of affiliate programs with Allinos : One-time and Recurring.<br><br>
+
+            <strong>One-Time :</strong> If the Affiliate is on a One-Time program than you receive one payment on per purchase of plans according to <a style="font-weight: bold;" href="#cma">Categories and Mediation Amount</a> <br><br>
+            <strong>Recurring :</strong> If the Affiliate is on a Recurring program than you receive half of your percentage(if you get Mediation of 30% ,than you get only half or 50%) of that purchase , but you get consistently whenever that customer
+            pays to Allinos on the running Plan .
+
+
+            <p> How You Get Paid By Allinos ?</p>
+
+            To Get Paid by the Allinos you have to deal with customers and connect them to Allinos , whenever a customer purchase any plan or deal with us<strong> we have Pay you According to Categories of purchase</strong> you can earn 10% to 30%. of
+            Our profit.
+            <br>For example : &nbsp; &nbsp; <br>if a person buy a website at minimum cost ( like 10,000 rupees) than you get 30% of that purchase. <br><br> &nbsp; &nbsp; &nbsp; &nbsp; 10,000 - ( Domain charge + Hosting Charge + Work ) = Total Amount <br>            &nbsp; &nbsp; &nbsp; than, <br> &nbsp; &nbsp; &nbsp; &nbsp;You get paid of = Total Amount/100x30 = <strong>Received Amount</strong> .<br><br> &nbsp; &nbsp; &nbsp; terms and conditions applyed.
+            <div id="cma"></div>
+            <h3 class="accordion" style="color: rgb(11, 125, 170);">Categories and Mediation Amount&nbsp;&#8628;</h3>
+            <div class="panel">
+                <p>Website -> 5% - 30% </p>
+                <div class="webopn" style="width: 90%;margin: auto; ">
+                    <p>Static Website -> 30%</p>
+                    <p>Dinamic Website -> 15.5%</p>
+                    <p>Custom Website -> 7 %</p>
+
+                </div>
+                <p>Hosting -> 10% per Payment</p>
+                <p>Ads Management -> 10% per Payment</p>
+                <p>Ads Management -> 12% per Payment</p>
+            </div>
+            <br><br> &nbsp; &nbsp; &nbsp; For a sale to make a commission to an affiliate, the customer must complete the order form and pay in full for the product. Commission will be paid only on sales that are made when the customer buy a servive from
+            Allinos (website, Hosting , App, Ads Management Plans etc.). If the affiliate is on the one-time payment option, they will receive a commission for new Order of services (website, Hosting , App, Ads Management Plans etc.).
+            <br><br> If the affiliate is on a recurring payment schedule, they will continue to collect commissions for each transaction that the customer paid for as long as the customer remains a paying customer. For affiliates participating in the
+            recurring program, commission will also accrue for plan upgrades and adding users.
+
+            <p> Payment</p>
+
+            An associate can request payment when their balance reaches a minimum balance of 500/- INR. Payment can be requested every 30 days. Payment processing may take up to 15 days from the date of request. Payment will generally be made via PayPal, Bank to
+            Bank ,UPI etc.
+
+            <p> Refund </p>
+
+            If the Customer requests a refund for a transaction for which the Affiliate has earned a commission, any commission earned on the refund amount will be deducted from you Affiliate's balance or not given to you.
+
+            <p> Use and Liability</p>
+
+            Affiliates are permitted to use the Allinos brand and marketing resources available in the Affiliates section of the Allinos application. The logo and other assets cannot be modified. Affiliate does not acquire any trademark, copyright or any other rights
+            over these materials.
+            <br> <br> Affiliate will never imply that they are acting on behalf of Allinos and will never directly advertise Allinos products.
+            <br> <br> Affiliate will never present itself , relationship with Allinos in a false or deceptive manner.
+
+            <br> <br> The Affiliate will not engage in the distribution of any unsolicited bulk email (spam) mentioning or referring to Allinos.
+
+            <p> Term and Termination</p>
+
+            Either party has the right to terminate the Agreement immediately without prior notice.
+            <br> <br> If the Affiliate terminates the agreement, no further commission will be paid for any past or future customer transactions from Allinos.
+            <br> <br> If Allinos chooses to terminate the Agreement, any balance will be paid to the Affiliate within 60 days of termination.
+            <br><br> If the Affiliate is on a recurring program, Allinos will not be bound for any future payments after termination.
+            <br>
+            <p> Government law</p>
+
+            This Agreement shall be governed by, construed and enforced in accordance with the laws of the India , with respect to its conflict of laws rules.
+
+            <!-- <p></p> to mediate
+        
+        All claims and disputes under or relating to this Agreement are to be settled by binding arbitration in the State of Arizona. An award of arbitration may be confirmed in a court of competent jurisdiction.
+         -->
+            <p> Change </p>
+
+            We may modify any of the terms and conditions of this Agreement at any time and at our sole discretion. These modifications may include, but are not limited to, changes in the scope of commissions available, commission schedules, payment procedures, and
+            affiliate program rules.
+            </p>
+            <br><br><br><br><br>
+    </div>
+
+
+
+    <!-- footer -->
+    <footer>
+        <div><img class="footerimg" src="/static/img/path111.png" alt="">
+            <h3 id="cname">AllinO</h3>
+        </div>
+        <div style="width: 20%; border: 3px solid white;"></div>
+
+        <div class="footer-link">
+            <a href="/">
+
+                <p>Home</p>
+            </a>
+            <a href="/about">
+
+                <p>About us</p>
+            </a>
+            <!-- <a href="#tools">
+                <p>Tools</p>
+            </a> -->
+            <!-- <a href="https://tools.allino.onine">
+                <p>All Tools</p>
+            </a> -->
+            <a href="/#Services">
+                <p>Services</p>
+            </a>
+            <!-- <a href="http://infornx.blogspot.com">
+                <p>Blogs</p>
+            </a> -->
+            <a href="/contact">
+                <p>Contact</p>
+            </a>
+            <a href="/Terms_Conditions">
+                <p>Terms & Conditions</p>
+            </a>
+            <a href="/Privacy_Policy">
+                <p>Privacy Policy</p>
+            </a>
+            <a href="/Disclaimer">
+                <p>Disclaimer</p>
+            </a>
+            <!-- <a href="/jobs">
+                <p>Find Works</p>
+            </a> -->
+            <!-- <a href="http://server1.allino.online">
+                <p>Projects/Demo</p>
+            </a> -->
+            <a href="/services/affiliate">
+                <p>Affiliate</p>
+            </a>
+        </div>
+        <div class="last-info">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+            <div class="social-buttons">
+                <div class="last-info-div">
+                    <h3 style="width: 100px; text-align: center;font-size: 22px; color: white; ">Support</h3>
+                    <a href="mailto:info@allino.online"><i class="fas fa-envelope-open"></i></a>
+                    <a href="/contact"><i class="fas fa-phone"></i></a><br>
+                    <a href=""><i class="	fas fa-map-marker-alt"></i></a>
+                    <h5 style="display: inline-block;font-size: 16px;color: white;">Flat no. 177, Chennd Colony , India</h5>
+                </div>
+            </div>
+            <div class="social-buttons">
+                <div class="last-info-div">
+                    <h3 style="width: 130px; text-align: center;font-size: 22px; color: white;">Social Links</h3>
+                    <a href="/contact"><i class="fab fa-teamspeak"></i></a>
+                    <a href="/contact"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/allinos_7"><i class="fab fa-instagram"></i></a>
+                    <a href="/contact"><i class="fab fa-youtube"></i></a>
+                    <a href="/contact"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <h5 class="coppyright">Copyright © 2020-2021, All Rights Reserved by Allinos Org.
+            </h5>
+        </div>
+
+    </footer>
+
+    <!-- <script></script>========= -->
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+    <script src="static/javascript/allino.js"></script>
+    <!-- scripts -->
+</body>
+
+</html>

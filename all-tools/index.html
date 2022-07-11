@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AllinO</title>
+    <link rel="shortcut icon" type="image/jpg" href="/static/img/gear1.jpgng" />
+    <link rel="stylesheet" href="/static/css/stylebody.css">
+    <link rel="stylesheet" href="/static/css/bg-struc-body.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+</head>
+
+<style>
+    .navbar {
+        box-shadow: 0px 0px 1px 0px 5px black;
+    }
+    
+    @media screen and (max-width: 550px) {
+        .services div {
+            margin: 10px;
+            width: 314px;
+            height: 120px;
+            border: 2px solid rgb(19, 214, 221);
+            padding: 10px;
+            transition-property: width !important;
+            transition-duration: .5s !important;
+        }
+        .toolsdiv {
+            height: 40px !important;
+            transition: none !important;
+            background-color: #fff !important;
+        }
+        .toolsdiv h4 {
+            width: 170px;
+            display: inline-block;
+            padding: 10px;
+            margin-top: 3px;
+            position: absolute;
+            text-align: center;
+        }
+    }
+    
+    h1 {
+        width: 100%;
+        text-align: center;
+        color: rgb(255, 255, 255);
+    }
+    
+    .toolsdiv h4 {
+        width: 170px;
+        display: inline-block;
+        padding: 10px;
+        position: absolute;
+        text-align: center;
+        margin: 0%;
+    }
+    
+    .toolsdiv {
+        height: 40px !important;
+        transition: none !important;
+        background-color: #fff !important;
+        transition-property: height !important;
+        transition-duration: .5s !important;
+    }
+    
+    .services div:hover {
+        width: 314px;
+    }
+    
+    .services img {
+        border-radius: 13px;
+    }
+    
+    #myInput {
+        /* background-image: url('/static/img/gear1.jpg; */
+        background-position: 10px 12px;
+        background-repeat: no-repeat;
+        display: block;
+        width: 60%;
+        float: left;
+        outline: none;
+        margin: 10px;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: 1.5px solid rgb(88, 88, 88);
+        border-radius: 50px;
+        margin-top: 12px;
+        transition: all .7s;
+    }
+    
+    #myInput:hover {
+        width: 94%;
+        margin: 10px;
+        margin-top: 12px;
+        margin-bottom: 12px;
+        border: 2px solid rgb(45, 150, 236);
+        transition: all .7s;
+    }
+    
+    @media screen and (max-width:500px) {
+        #myInput:hover {
+            border: 2px solid rgb(45, 150, 236);
+            transition: all .7s;
+            width: 80%;
+            margin: 10px;
+            margin-top: 10px;
+            outline: none;
+        }
+    }
+    
+    #h1 {
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0);
+        color: rgb(38, 179, 233);
+        clear: both;
+    }
+    
+    #tag {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 60%;
+        margin: auto;
+    }
+    
+    #tag a {
+        text-decoration: none;
+        color: white;
+        padding: 5px;
+        background: linear-gradient(rgb(19, 122, 219) 45%, rgba(11, 216, 216, 0.061));
+        border-radius: 10px;
+        margin: auto;
+    }
+</style>
+
+<body>
+    <!-- nav -->
+    <header>
+
+        <style>
+            * {
+                scroll-behavior: smooth;
+            }
+            
+            @media screen and (max-width:500px) {
+                .manus {
+                    display: none;
+                }
+                #mobile-manu {
+                    display: block;
+                }
+                .navbaricon {
+                    width: 50px;
+                    position: absolute;
+                    top: 5px;
+                    right: 33px;
+                }
+                .sidenav {
+                    height: 100%;
+                    width: 0;
+                    position: fixed;
+                    z-index: 1;
+                    top: 0;
+                    left: 0;
+                    background-color: #111;
+                    overflow-x: hidden;
+                    transition: 0.5s;
+                    padding-top: 60px;
+                }
+                .sidenav a {
+                    padding: 8px 8px 8px 32px;
+                    text-decoration: none;
+                    font-size: 25px;
+                    color: #fffefe;
+                    display: block;
+                    transition: 0.3s;
+                }
+                .sidenav a:hover {
+                    color: #f1f1f1;
+                }
+                .sidenav .closebtn {
+                    position: absolute;
+                    top: 0;
+                    right: 25px;
+                    font-size: 36px;
+                    margin-left: 50px;
+                }
+            }
+        </style>
+
+        <div class="navbar ">
+            <div>
+                <a href="/">
+                    <img src="/static/img/path51.png ">
+                    <p class="tagline ">Get Every Thing Online</p>
+                </a>
+            </div>
+            <!-- manu -->
+            <ul class="manus">
+                <a href="/ ">
+                    <li class="manu ">Home</li>
+                </a>
+                <a href="/#tools ">
+                    <li class="manu ">Tools</li>
+                </a>
+                <a href="/#Services ">
+                    <li class="manu ">Services</li>
+                </a>
+                <a href="/about ">
+                    <li class="manu ">About</li>
+                </a>
+                <a href="/contact ">
+                    <li class="manu ">Contect Us</li>
+                </a>
+
+            </ul>
+        </div>
+        <!-- responsive sidebar-->
+        <div id="mobile-manu">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" style="padding: 0px 12px;margin-top: 18px; border-radius: 40px;border: 2px solid white;" class="closebtn" onclick="closeNav()">&times;</a>
+                <br><br><br>
+                <a href="/">Home</a>
+                <a href="/about">About us</a>
+                <a href="/#Services">Services</a>
+                <a href="/#tools">Tools</a>
+                <!-- <a href="https://tools.allino.online">All tools</a> -->
+                <a href="/contact">Contact</a>
+                <a href="/Terms_Conditions">Terms & Conditions</a>
+                <a href="/Privacy_Policy">Privacy Policy</a>
+                <a href="/Disclaimer">Disclaimer</a>
+                <a href="/static/about/projects">Projects</a>
+                <!-- <a href="/blogs">Blogs</a> -->
+            </div>
+            <!-- icon -->
+            <img class="navbaricon" onclick="openNav()" src="/static/img/navicon.png">
+
+
+        </div>
+
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+    </header>
+
+    <h1 id="h1">All Tools</h1>
+    <div id="tag">
+
+        <a href="#calculation">#Calculation</a>
+        <a href="">#SEO</a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+
+
+    </div>
+    <br>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name"></input>
+
+
+    <div class="custom-shape-divider-bottom-1622774680">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path
+                d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                opacity=".25" class="shape-fill"></path>
+            <path
+                d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                opacity=".5" class="shape-fill"></path>
+            <path
+                d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+                class="shape-fill"></path>
+        </svg>
+
+    </div>
+    <div id="tools" class="services">
+        <h1 id="calculation">Calculation tools</h1>
+        <a href="" id="">
+            <div class="toolsdiv"><img src="/static/img/gear2.jpg">
+                <h4>Love Calculation</h4>
+            </div>
+        </a>
+        <a href="" id="">
+            <div class="toolsdiv"><img src="/static/img/gear2.jpg">
+                <h4>SEO Tools</h4>
+            </div>
+        </a>
+        <a href="" id="">
+            <div class="toolsdiv"><img src="/static/img/gear2.jpg">
+                <h4>All In One Downloader</h4>
+            </div>
+        </a>
+        <a href="" id="">
+            <div class="toolsdiv"><img src="/static/img/gear2.jpg">
+                <h4>Love Calculation</h4>
+            </div>
+        </a>
+        <a href="" id="">
+            <div class="toolsdiv"><img src="/static/img/gear2.jpg">
+                <h4>SEO Tools</h4>
+            </div>
+        </a>
+        <a href="" id="">
+            <div class="toolsdiv"><img src="/static/img/gear2.jpg">
+                <h4>All In One Downloader</h4>
+            </div>
+        </a>
+        <a href="" id="">
+            <div class="toolsdiv"><img src="/static/img/gear2.jpg">
+                <h4>Love Calculation</h4>
+            </div>
+        </a>
+        <a href="" id="">
+            <div class="toolsdiv"><img src="/static/img/gear2.jpg">
+                <h4>SEO Tools</h4>
+            </div>
+        </a>
+        <a href="" id="">
+            <div class="toolsdiv"><img src="/static/img/gear2.jpg">
+                <h4>All In One Downloader</h4>
+            </div>
+        </a>
+        <a href="" id="">
+            <div class="toolsdiv"><img src="/static/img/gear1.jpg">
+                <h4>My IP finder</h4>
+            </div>
+        </a>
+        <a href="" id="">
+            <div class="toolsdiv"><img src="/static/img/gear1.jpg">
+                <h4>Bulk Barcode Generator</h4>
+            </div>
+        </a>
+        <a href="" id="">
+            <div class="toolsdiv"><img src="/static/img/gear1.jpg">
+                <h4>Website traffic Checker</h4>
+            </div>
+        </a>
+
+        <a href="" id="">
+            <div class="toolsdiv"><img src="/static/img/gear1.jpg">
+                <h4>Calculation tools</h4>
+            </div>
+        </a>
+        <a href="" id="">
+            <div class="toolsdiv"><img src="/static/img/gear1.jpg">
+                <h4>SEO Tools</h4>
+            </div>
+        </a>
+        <a href="" id="">
+            <div class="toolsdiv"><img src="/static/img/gear1.jpg">
+                <h4>All In One Downloader</h4>
+            </div>
+        </a>
+        <a href="" id="">
+            <div class="toolsdiv"><img src="/static/img/gear1.jpg">
+                <h4>My IP finder</h4>
+            </div>
+        </a>
+        <a href="" id="">
+            <div class="toolsdiv"><img src="/static/img/gear1.jpg">
+                <h4>Bulk Barcode Generator</h4>
+            </div>
+        </a>
+        <a href="" id="">
+            <div class="toolsdiv"><img src="/static/img/gear1.jpg">
+                <h4>Website traffic Checker</h4>
+            </div>
+        </a>
+
+        <a href="" id="">
+            <div class="toolsdiv"><img src="/static/img/gear1.jpg">
+                <h4>Calculation tools</h4>
+            </div>
+        </a>
+        <a href="" id="">
+            <div class="toolsdiv"><img src="/static/img/gear1.jpg">
+                <h4>SEO Tools</h4>
+            </div>
+        </a>
+        <a href="" id="">
+            <div class="toolsdiv"><img src="/static/img/gear1.jpg">
+                <h4>All In One Downloader</h4>
+            </div>
+        </a>
+        <a href="" id="">
+            <div class="toolsdiv"><img src="/static/img/gear1.jpg">
+                <h4>My IP finder</h4>
+            </div>
+        </a>
+        <a href="" id="">
+            <div class="toolsdiv"><img src="/static/img/gear1.jpg">
+                <h4>Bulk Barcode Generator</h4>
+            </div>
+        </a>
+        <a href="" id="">
+            <div class="toolsdiv"><img src="/static/img/gear1.jpg">
+                <h4>Website traffic Checker</h4>
+            </div>
+        </a>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- footer -->
+    <footer>
+        <div><img class="footerimg" src="/static/img/path111.png" alt="">
+            <h3 id="cname">AllinO</h3>
+        </div>
+        <div style="width: 20%; border: 3px solid white;"></div>
+
+        <div class="footer-link">
+            <a href="/">
+
+                <p>Home</p>
+            </a>
+            <a href="/about">
+
+                <p>About us</p>
+            </a>
+            <!-- <a href="#tools">
+                <p>Tools</p>
+            </a> -->
+            <!-- <a href="https://tools.allino.onine">
+                <p>All Tools</p>
+            </a> -->
+            <a href="/#Services">
+                <p>Services</p>
+            </a>
+            <!-- <a href="http://infornx.blogspot.com">
+                <p>Blogs</p>
+            </a> -->
+            <a href="/contact">
+                <p>Contact</p>
+            </a>
+            <a href="/Terms_Conditions">
+                <p>Terms & Conditions</p>
+            </a>
+            <a href="/Privacy_Policy">
+                <p>Privacy Policy</p>
+            </a>
+            <a href="/Disclaimer">
+                <p>Disclaimer</p>
+            </a>
+            <!-- <a href="/jobs">
+                <p>Find Works</p>
+            </a> -->
+            <!-- <a href="http://server1.allino.online">
+                <p>Projects/Demo</p>
+            </a> -->
+            <a href="/services/affiliate">
+                <p>Affiliate</p>
+            </a>
+        </div>
+        <div class="last-info">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+            <div class="social-buttons">
+                <div class="last-info-div">
+                    <h3 style="width: 100px; text-align: center;font-size: 22px; color: white; ">Support</h3>
+                    <a href="mailto:info@allino.online"><i class="fas fa-envelope-open"></i></a>
+                    <a href="/contact"><i class="fas fa-phone"></i></a><br>
+                    <a href=""><i class="	fas fa-map-marker-alt"></i></a>
+                    <h5 style="display: inline-block;font-size: 16px;color: white;">Flat no. 177, Chennd Colony , India</h5>
+                </div>
+            </div>
+            <div class="social-buttons">
+                <div class="last-info-div">
+                    <h3 style="width: 130px; text-align: center;font-size: 22px; color: white;">Social Links</h3>
+                    <a href="/contact"><i class="fab fa-teamspeak"></i></a>
+                    <a href="/contact"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/allinos_7"><i class="fab fa-instagram"></i></a>
+                    <a href="/contact"><i class="fab fa-youtube"></i></a>
+                    <a href="/contact"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <h5 class="coppyright">Copyright © 2020-2021, All Rights Reserved by Allinos Org.
+            </h5>
+        </div>
+
+    </footer>
+
+    <!-- <script></script>========= -->
+    <script src="/static/javascript/allino.js"></script>
+    <!-- scripts -->
+
+
+    <script>
+        function myFunction() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("tools");
+            li = ul.getElementsByTagName("div");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("h4")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>

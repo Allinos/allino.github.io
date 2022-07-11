@@ -1,0 +1,225 @@
+/* .flex-services{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+#imgdev img {
+    width: 350px;
+    display: inline-block;
+    position: absolute;
+    left: 935px;
+    top: 134px;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.services div {
+    margin: 20px;
+    width: 298px;
+    height: 150px;
+    border: 2px solid rgb(19, 214, 221);
+    padding: 10px;
+    transition-property: width, height;
+    transition-duration: .5s;
+    border-radius: 7px;
+    background-color: rgba(255, 255, 255, 0.465);
+}
+
+.services div:hover {
+    width: 320px;
+    height: 190px;
+}
+
+.services img {
+    display: inline-block;
+    width: 80px;
+    margin-top: 0px;
+}
+
+.services p {
+    width: 92%;
+    display: inline-block;
+    font-size: 17px;
+    margin-top: 0px;
+    background-color: rgb(185, 237, 241);
+    /*    rgba(163, 224, 219, 0.781); */
+    border-radius: 13px;
+    padding: 10px;
+    margin: 0px;
+}
+
+.services-text {
+    display: inline-block;
+    width: 110px;
+    font-size: 23px;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+#inisiative {
+    width: 85%;
+    background-color: rgb(185, 237, 241);
+    /*rgba(163, 224, 219, 0.781); */
+    border-radius: 8px;
+    margin: auto;
+    padding: 30px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#inisiative h2 {
+    text-align: center;
+    color: rgb(4, 108, 177);
+}
+
+#inisiative p {
+    text-align: center;
+    color: rgb(5, 50, 61);
+}
+
+#buts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#inisiative div {
+    margin: 10px
+}
+
+#inisiative button {
+    width: 250px;
+    height: 55px;
+    padding: 5px;
+    font-size: 20px;
+    border: none;
+    font-weight: bold;
+    border-radius: 50px;
+    background-color: #fff;
+    color: rgb(8, 195, 219);
+}
+
+#inisiative button:hover {
+    background-color: rgb(8, 195, 219);
+    color: rgb(255, 255, 255);
+}
+
+@media screen and (min-width: 900px) {
+    #inisiative button {
+        width: 270px;
+        height: 55px;
+        padding: 5px;
+        font-size: 18px;
+        border: none;
+        font-weight: bold;
+        border-radius: 50px;
+        background-color: #fff;
+        color: rgb(8, 195, 219);
+    }
+    #inisiative h2 {
+        text-align: center;
+        color: rgb(4, 108, 177);
+        font-size: 29px;
+    }
+}
+
+.toolsdiv {
+    height: 60px !important;
+    transition: none !important;
+    background-color: #fff!important;
+    transition : all .5s;
+}
+
+.toolsdiv:hover {
+    width: 280px !important;
+    height: 60px !important;
+}
+
+.toolsdiv img {
+    width: 63px !important;
+}
+
+.toolsdiv h4 {
+    width: 170px;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 14px;
+    position: absolute;
+    text-align: center;
+}
+
+#tools {
+    background-color: rgb(13, 179, 233);
+}
+
+
+/* for devider */
+
+.custom-shape-divider-bottom-1622774680 {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1622774680 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 75px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1622774680 .shape-fill {
+    fill: #26B3E9;
+}
+
+
+/* end devider */
+
+#more {
+    background-color: rgb(255, 255, 255);
+    width: 223px;
+    margin: auto;
+    border-radius: 13px;
+    transition-property: width;
+    transition-duration: .5s;
+    z-index: -1;
+}
+
+#more img {
+    width: 55px;
+    display: inline-block;
+    position: absolute;
+    margin: -56px;
+    margin-left: 57%;
+}
+
+#more h1 {
+    display: inline-block;
+    margin: 0px;
+    width: 200px;
+    padding: 10px;
+    font-size: 22px;
+    margin-top: -16px;
+    text-align: center;
+    border-radius: 13px;
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#more:hover {
+    width: 280px;
+}
