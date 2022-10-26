@@ -132,21 +132,26 @@ html {
     color: rgb(255, 255, 255);
 }
 #consult {
-    width: 85%;
-    background-color: rgb(255, 255, 255);
+    width: 84%;
+    background-color: rgba(255, 255, 255, 0);
     border-radius: 8px;
     margin: auto;
     padding: 30px;
     margin: auto;
-    margin-top: 50px;
     margin-bottom: 50px;
-    border: 2px solid rgb(185, 237, 241);;
+    border: 2px solid rgb(8, 195, 219);
 }
 #consult button:hover {
     background-color: #fff;
     color: rgb(8, 195, 219);
 }
+#cloud{
+    position: relative;
+    top: 50px;
+    width: 250px;
+    z-index: -1;
 
+}
 @media screen and (min-width: 900px) {
     #inisiative button {
         width: 270px;
@@ -163,6 +168,11 @@ html {
         text-align: center;
         color: rgb(4, 108, 177);
         font-size: 29px;
+    }
+    #cloud {
+        top: 50px;
+        left: 5%;
+        width: 336px;
     }
 }
 
