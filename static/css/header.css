@@ -27,6 +27,7 @@
         margin: auto;
         display: block;
         width: 130px;
+        margin-top: 4px
     }
     
     @import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');

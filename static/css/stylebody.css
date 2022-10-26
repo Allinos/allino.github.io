@@ -116,6 +116,37 @@ html {
     color: rgb(255, 255, 255);
 }
 
+#consult h2 {
+    text-align: center;
+    color: rgb(4, 108, 177);
+}
+#consult button {
+    width: 250px;
+    height: 55px;
+    padding: 5px;
+    font-size: 20px;
+    border: none;
+    font-weight: bold;
+    border-radius: 50px;
+    background-color: rgb(8, 195, 219);
+    color: rgb(255, 255, 255);
+}
+#consult {
+    width: 85%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    margin: auto;
+    padding: 30px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 2px solid rgb(185, 237, 241);;
+}
+#consult button:hover {
+    background-color: #fff;
+    color: rgb(8, 195, 219);
+}
+
 @media screen and (min-width: 900px) {
     #inisiative button {
         width: 270px;
