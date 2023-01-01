@@ -21,14 +21,14 @@
         background-color: rgb(202, 237, 238);
         padding-bottom: 150px;
     }
-    
+
     .columns {
         margin-top: 30px;
         width: 30%;
         padding: 8px;
         background-color: #fff;
     }
-    
+
     .price {
         list-style-type: none;
         border: 1px solid #eee;
@@ -37,44 +37,58 @@
         -webkit-transition: 0.3s;
         transition: 0.3s;
     }
-    
+
     .price:hover {
         box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2)
     }
-    
+
     .price .header {
         background-color: #111;
         color: white;
         font-size: 25px;
+        text-align: center;
+        margin: 0px;
+        padding: 10px;
     }
-    
+
+    .price .header-price {
+        color: white;
+        font-size: .9em;
+        margin: 0px;
+        text-align: center;
+    }
+
     .price li {
         border-bottom: 1px solid #eee;
         padding: 20px;
         text-align: center;
     }
-    
+
     .price .grey {
-        background-color: rgb(178, 229, 245);
-        font-size: 20px;
-    }
-    
-    .button1 {
-        background-color: #0497aa;
-        border: none;
-        color: white;
-        padding: 10px 25px;
+        background-image: linear-gradient(#0dccea, #0d70ea);
+        border: 0;
+        border-radius: 4px;
+        box-shadow: rgba(0, 0, 0, .3) 0 5px 15px;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        font-family: Montserrat, sans-serif;
+        font-size: 1.1em;
+        margin: 5px;
+        padding: 10px 15px;
         text-align: center;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
         text-decoration: none;
-        font-size: 18px;
     }
-    
+
     @media only screen and (max-width: 600px) {
         .columns {
             width: 90%;
         }
     }
-    
+
     .accordion {
         background-color: rgb(255, 255, 255);
         color: rgb(0, 0, 0);
@@ -86,12 +100,12 @@
         font-size: 15px;
         transition: 0.4s;
     }
-    
+
     .active,
     .accordion:hover {
         background-color: #ccc;
     }
-    
+
     .panel {
         padding: 0 18px;
         background-color: white;
@@ -108,20 +122,23 @@
             * {
                 scroll-behavior: smooth;
             }
-            
+
             @media screen and (max-width:500px) {
                 .manus {
                     display: none;
                 }
+
                 #mobile-manu {
                     display: block;
                 }
+
                 .navbaricon {
                     width: 50px;
                     position: absolute;
                     top: 5px;
                     right: 33px;
                 }
+
                 .sidenav {
                     height: 100%;
                     width: 0;
@@ -134,6 +151,7 @@
                     transition: 0.5s;
                     padding-top: 60px;
                 }
+
                 .sidenav a {
                     padding: 8px 8px 8px 32px;
                     text-decoration: none;
@@ -142,9 +160,11 @@
                     display: block;
                     transition: 0.3s;
                 }
+
                 .sidenav a:hover {
                     color: #f1f1f1;
                 }
+
                 .sidenav .closebtn {
                     position: absolute;
                     top: 0;
@@ -185,7 +205,9 @@
         <!-- responsive sidebar-->
         <div id="mobile-manu">
             <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" style="padding: 0px 12px;margin-top: 18px; border-radius: 40px;border: 2px solid white;" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="javascript:void(0)"
+                    style="padding: 0px 12px;margin-top: 18px; border-radius: 40px;border: 2px solid white;"
+                    class="closebtn" onclick="closeNav()">&times;</a>
                 <br><br><br>
                 <a href="/">Home</a>
                 <a href="/about">About us</a>
@@ -222,13 +244,16 @@
 
     <br><br><br><br><br>
     <h2 style="text-align:center;color: white;">Website Development Pricing Tables</h2>
-    <!-- <p style="text-align:center">Resize the browser window to see the effect.</p> -->
     <div id="price-col">
-
         <div class="columns">
             <ul class="price">
-                <li class="header" style="background: linear-gradient( rgb(248, 211, 3),white 150%)">Basic</li>
-                <li class="grey">₹ <del>3000</del> <strong>Free</strong></li>
+                <p class="header" style="background: #f89020">Basic</p>
+                <p class="header-price" style="background: #f89020">₹ <del>4599</del> <strong>Free</strong></p>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="#f89020" fill-opacity="1"
+                        d="M0,192L40,213.3C80,235,160,277,240,282.7C320,288,400,256,480,250.7C560,245,640,267,720,234.7C800,203,880,117,960,80C1040,43,1120,53,1200,74.7C1280,96,1360,128,1400,144L1440,160L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z">
+                    </path>
+                </svg>
                 <li>Free 1GB SSD Storage</li>
                 <li>Free Static Website</li>
                 <li>Free Co-Domain</li>
@@ -241,14 +266,20 @@
                     <p>We provide that website only for 1 month </p>
                     <p>After that you have to buy on monthly basis for 1 Year .</p>
                 </div>
-                <li class="grey"><a href="#" class="button1">Buy Now*</a></li>
+                <li class="grey"><a href="#">Buy Now*</a></li>
             </ul>
         </div>
+        <!-- HTML !-->
 
         <div class="columns">
             <ul class="price">
-                <li class="header" style=" background: linear-gradient( #03a4e4,white 150%)">Starter</li>
-                <li class="grey">₹ <del>1100/m</del> 500/m or FRP</li>
+                <p class="header" style=" background:#40c952">Starter</p>
+                <p class="header-price" style=" background:#40c952">₹ <del>4599</del> <strong>Free</strong></p>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="#40c952" fill-opacity="1"
+                        d="M0,192L30,176C60,160,120,128,180,106.7C240,85,300,75,360,106.7C420,139,480,213,540,224C600,235,660,181,720,165.3C780,149,840,171,900,192C960,213,1020,235,1080,208C1140,181,1200,107,1260,80C1320,53,1380,75,1410,85.3L1440,96L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z">
+                    </path>
+                </svg>
                 <li>10GB SSD Storage</li>
                 <li>5+ Pages</li>
                 <li>Static /Dynamic Website</li>
@@ -257,14 +288,19 @@
                 <li>Free Maintainence</li>
                 <li>3GB Bandwidth</li>
                 <li>N/A</li>
-                <li class="grey"><a href="#" class="button1">Buy Now*</a></li>
+                <li class="grey"><a href="#">Buy Now*</a></li>
             </ul>
         </div>
 
         <div class="columns">
             <ul class="price">
-                <li class="header" style=" background: linear-gradient( #089c21 10%,white 150%)">Premium</li>
-                <li class="grey">As per Requirment</li>
+                <p class="header" style=" background: #0D6BEA">Premium</p>
+                <p class="header-price" style=" background: #0D6BEA">As per Requirment</p>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="#0D6BEA" fill-opacity="1"
+                        d="M0,160L30,149.3C60,139,120,117,180,117.3C240,117,300,139,360,149.3C420,160,480,160,540,181.3C600,203,660,245,720,240C780,235,840,181,900,160C960,139,1020,149,1080,154.7C1140,160,1200,160,1260,144C1320,128,1380,96,1410,80L1440,64L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z">
+                    </path>
+                </svg>
                 <li>25GB SSD Storage</li>
                 <li>1 business Email</li>
                 <li>10+ Pages</li>
@@ -281,18 +317,25 @@
                         <li>7GB Bandwidth</li>
                     </p>
                 </div>
-                <li class="grey"><a href="#" class="button1">Buy Now*</a></li>
+                <li class="grey"><a href="#">Buy Now*</a></li>
             </ul>
         </div>
 
         <div class="columns" style="margin:15px auto ;">
             <ul class="price">
-                <li class="header" style=" background: linear-gradient(rgb(206, 37, 7) ,white 150%)">Premium++</li>
-                <li class="grey">As per Requirment</li>
+                <p class="header" style=" background: #f82d42">Premium++</p>
+                <p class="header-price" style=" background: #f82d42">As per Requirment</p>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="#f82d42" fill-opacity="1"
+                        d="M0,288L30,277.3C60,267,120,245,180,229.3C240,213,300,203,360,176C420,149,480,107,540,106.7C600,107,660,149,720,170.7C780,192,840,192,900,181.3C960,171,1020,149,1080,138.7C1140,128,1200,128,1260,122.7C1320,117,1380,107,1410,101.3L1440,96L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z">
+                    </path>
+                </svg>
                 <li>50GB SSD Storage</li>
                 <li class="accordion">Static /Dynamic Website&nbsp;&#8628;</li>
                 <div class="panel">
-                    <p> Magento / OpenCart / WooCommerce / Shopify / PrestaShop and more CMS setup for Online store and other uses !<br> eCommerce / Business / Entertainment / Nonprofit / Personal / Web Portal / Portfolio / Blogs / Educational / Informational
+                    <p> Magento / OpenCart / WooCommerce / Shopify / PrestaShop and more CMS setup for Online store and
+                        other uses !<br> eCommerce / Business / Entertainment / Nonprofit / Personal / Web Portal /
+                        Portfolio / Blogs / Educational / Informational
                         / Social Media / Brochures / Events / Online Forums / Membership
 
                     </p>
@@ -306,7 +349,7 @@
                 <li>Free Search Engine Submission</li>
                 <li>Free TLD Domains/Co-Domain</li>
                 <li>Unlimited Bandwidth</li>
-                <li class="grey"><a href="#" class="button1">Buy Now*</a></li>
+                <li class="grey"><a href="#">Buy Now*</a></li>
             </ul>
         </div>
 
@@ -317,26 +360,12 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <script>
         var acc = document.getElementsByClassName("accordion");
         var i;
 
         for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function() {
+            acc[i].addEventListener("click", function () {
                 this.classList.toggle("active");
                 var panel = this.nextElementSibling;
                 if (panel.style.maxHeight) {
