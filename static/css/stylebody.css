@@ -264,3 +264,51 @@ html {
 #more:hover {
     width: 280px;
 }
+#custommer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#custommer div {
+    width: 150px;
+    padding: 40px;
+    border-radius: 13px;
+    border: 2px solid rgb(212, 212, 212);
+    box-shadow: 1px 1px 15px rgb(165, 162, 162);
+    background-color: #fff;
+    margin: 20px;
+}
+
+#custommer h5 {
+    color: rgb(124, 231, 241);
+    ;
+    font-size: 33px;
+    text-align: center;
+    margin: 5px;
+}
+
+#custommer p {
+    text-align: center;
+    font-weight: bold;
+}
+
+#div-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.profile {
+    width: 300px;
+    background-color: rgb(189, 242, 246);
+    color: rgb(31, 29, 29);
+    padding: 30px;
+    margin: 20px;
+    border-radius: 13px;
+    box-shadow: 1px 1px 10px rgb(143, 142, 142);
+}
+
+.profile p {
+    display: inline-block;
+}
