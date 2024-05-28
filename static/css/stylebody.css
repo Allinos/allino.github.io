@@ -1,9 +1,11 @@
 html {
     scroll-behavior: smooth;
 }
-a{
-   color: #055b7e;
+
+a {
+    color: #055b7e;
 }
+
 #imgdev img {
     width: 350px;
     display: inline-block;
@@ -57,9 +59,8 @@ a{
 }
 
 .services p {
-    font-size: 15px;
+    font-size: 13px;
     margin: 0px;
-
 }
 
 .services-text {
@@ -168,7 +169,7 @@ a{
 #tools {
     background-color: rgb(13, 179, 233);
     display: flex;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 
 }
@@ -277,9 +278,8 @@ a{
 }
 
 #custommer h5 {
-    color: rgb(124, 231, 241);
-    ;
-    font-size: 33px;
+    color: #046cb1;
+    font-size: 66px;
     text-align: center;
     margin: 5px;
 }
@@ -296,10 +296,11 @@ a{
     border-radius: 13px;
     padding: 20px;
     box-sizing: border-box;
-    color:rgb(4, 108, 177);
+    color: rgb(4, 108, 177);
 }
-#clients-main-ctn  h1 {
-  margin-left: 5%;
+
+#clients-main-ctn h1 {
+    margin-left: 5%;
 }
 
 
