@@ -1,13 +1,9 @@
-/* .flex-services{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}*/
-
 html {
     scroll-behavior: smooth;
 }
-
+a{
+   color: #055b7e;
+}
 #imgdev img {
     width: 350px;
     display: inline-block;
@@ -20,57 +16,60 @@ html {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    position: relative;
+    z-index: 10;
+    margin: auto;
+    margin-top: 80px;
+    width: 90%;
+    box-sizing: border-box;
 }
 
-.services div {
+.services .service-list {
     margin: 20px;
-    width: 298px;
-    height: 150px;
-    border: 2px solid rgb(19, 214, 221);
-    padding: 10px;
+    width: 300px;
+    height: 180px;
+    color: #055b7e;
+    padding: 20px;
     transition-property: width, height;
-    transition-duration: .5s;
-    border-radius: 7px;
-    background-color: rgba(255, 255, 255, 0.465);
+    transition-duration: .2s;
+    border-radius: 13px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 5px 5px 1px rgb(231, 231, 231);
+
 }
 
-.services div:hover {
-    width: 320px;
+.services .ctn-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.services .service-list:hover {
+    width: 300px;
     height: 190px;
 }
 
 .services img {
     display: inline-block;
-    width: 80px;
+    width: 130px;
     margin-top: 0px;
 }
 
 .services p {
-    width: 92%;
-    display: inline-block;
-    font-size: 17px;
-    margin-top: 0px;
-    background-color: rgb(185, 237, 241);
-    /*    rgba(163, 224, 219, 0.781); */
-    border-radius: 13px;
-    padding: 10px;
+    font-size: 15px;
     margin: 0px;
+
 }
 
 .services-text {
-    display: inline-block;
-    width: 110px;
     font-size: 23px;
-    position: absolute;
-    margin-top: 10px;
-    margin-left: 20px;
-    text-align: center;
+    text-align: right;
 }
 
 #inisiative {
     width: 85%;
     background-color: rgb(185, 237, 241);
-    /*rgba(163, 224, 219, 0.781); */
     border-radius: 8px;
     margin: auto;
     padding: 30px;
@@ -116,10 +115,21 @@ html {
     color: rgb(255, 255, 255);
 }
 
+.consult-ctn {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px;
+    border-radius: 13px;
+    box-shadow: 1px 0px 10px 3px rgb(179, 178, 178);
+    width: 90%;
+    margin: auto;
+}
+
 #consult h2 {
-    text-align: center;
     color: rgb(4, 108, 177);
 }
+
 #consult button {
     width: 250px;
     height: 55px;
@@ -131,6 +141,7 @@ html {
     background-color: rgb(8, 195, 219);
     color: rgb(255, 255, 255);
 }
+
 #consult {
     width: 84%;
     background-color: rgba(255, 255, 255, 0);
@@ -138,54 +149,39 @@ html {
     margin: auto;
     padding: 30px;
     margin: auto;
-    margin-bottom: 50px;
-    border: 2px solid rgb(8, 195, 219);
 }
+
 #consult button:hover {
     background-color: #fff;
     color: rgb(8, 195, 219);
 }
-#cloud{
+
+#cloud {
     position: relative;
-    top: 51px;
-    width: 250px;
-    z-index: -1;
+    top: 95px;
+    left: 5%;
+    width: 436px;
+    margin-top: -50px;
 
 }
-@media screen and (min-width: 900px) {
-    #inisiative button {
-        width: 270px;
-        height: 55px;
-        padding: 5px;
-        font-size: 18px;
-        border: none;
-        font-weight: bold;
-        border-radius: 50px;
-        background-color: #fff;
-        color: rgb(8, 195, 219);
-    }
-    #inisiative h2 {
-        text-align: center;
-        color: rgb(4, 108, 177);
-        font-size: 29px;
-    }
-    #cloud {
-        top: 50px;
-        left: 5%;
-        width: 336px;
-    }
+
+#tools {
+    background-color: rgb(13, 179, 233);
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+
 }
 
 .toolsdiv {
+    width: 300px;
     height: 60px !important;
     transition: none !important;
-    background-color: #fff!important;
-    transition : all .5s;
-}
-
-.toolsdiv:hover {
-    width: 280px !important;
-    height: 60px !important;
+    background-color: #fff !important;
+    transition: all .5s;
+    padding: 10px;
+    border-radius: 7px;
+    margin: 10px 10px;
 }
 
 .toolsdiv img {
@@ -199,11 +195,10 @@ html {
     margin-top: 14px;
     position: absolute;
     text-align: center;
+    color: rgb(4, 108, 177);
+
 }
 
-#tools {
-    background-color: rgb(13, 179, 233);
-}
 
 
 /* for devider */
@@ -264,6 +259,7 @@ html {
 #more:hover {
     width: 280px;
 }
+
 #custommer {
     display: flex;
     flex-wrap: wrap;
@@ -293,22 +289,47 @@ html {
     font-weight: bold;
 }
 
-#div-main {
+#clients-main-ctn {
+    width: 90%;
+    margin: auto;
+    background-color: #b9edf1;
+    border-radius: 13px;
+    padding: 20px;
+    box-sizing: border-box;
+    color:rgb(4, 108, 177);
+}
+#clients-main-ctn  h1 {
+  margin-left: 5%;
+}
+
+
+.clients-ctn {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
-.profile {
-    width: 300px;
-    background-color: rgb(189, 242, 246);
-    color: rgb(31, 29, 29);
-    padding: 30px;
+.clients-ctn img {
+    width: 100%;
+}
+
+.content-ctn div {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 120, 141);
+    padding: 15px 30px;
     margin: 20px;
-    border-radius: 13px;
-    box-shadow: 1px 1px 10px rgb(143, 142, 142);
+    border-radius: 7px;
+    box-shadow: 1px 1px 10px rgb(202, 202, 202);
+
+}
+
+.profile h4 {
+    margin: 5px;
+    text-transform: uppercase;
 }
 
 .profile p {
     display: inline-block;
+    margin: 3px;
+    text-align: left;
+    font-size: 14px;
 }

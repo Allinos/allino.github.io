@@ -10,6 +10,9 @@
     #Services {
         margin-top: 280px;
     }
+    .services .service-list {
+     width: auto;
+    }
     .slideshow-container {
         margin: auto;
         margin-left: 3px;
@@ -22,12 +25,15 @@
         margin-left: -49px;
         color: white;
     }
-    .services div {
-        margin: 20px;
-        width: 314px;
-        height: 150px;
-        border: 2px solid rgb(19, 214, 221);
-        padding: 10px;
+
+    .consult-ctn img{
+        width: 100%;
+     }
+     .consult-ctn{
+        flex-wrap: wrap;
+    }
+    .clients-ctn {
+        flex-wrap: wrap-reverse;
     }
 }
 
@@ -50,18 +56,7 @@
         color: white;
         font-size: 69px;
     }
-    .services div {
-        margin: 10px;
-        width: 270px;
-        height: 170px;
-        border: 2px solid rgb(19, 214, 221);
-        padding: 10px;
-        transition-property: none;
-    }
-    .services div:hover {
-        width: 290px;
-        height: 170px;
-    }
+ 
 }
 
 
@@ -82,5 +77,30 @@
         position: absolute;
         top: 10px;
         height: 850px;
+    }
+}
+@media screen and (max-width: 900px) {
+    #inisiative button {
+        width: 270px;
+        height: 55px;
+        padding: 5px;
+        font-size: 18px;
+        border: none;
+        font-weight: bold;
+        border-radius: 50px;
+        background-color: #fff;
+        color: rgb(8, 195, 219);
+    }
+
+    #inisiative h2 {
+        text-align: center;
+        color: rgb(4, 108, 177);
+        font-size: 29px;
+    }
+
+    #cloud {
+        top: 50px;
+        left: 5%;
+        width: 336px;
     }
 }
